@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"/>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
+
+    <link rel="stylesheet" href="./styles/output.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Sushi da República</title>
+</head>
+<body>
+   <header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center">
+    <div class="w-full h-full flex flex-col justify-center items-center">
+        <img
+          src="./assets/Republica.logo.jpg"
+          alt="Logo Sushi República"
+          class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200"
+        />
+        <h1 class="text-3xl mt-4 mb-2 font-bold text-white">Sushi República</h1>
+    
+        <span class="text-white font-medium">Rua Lourenço B de Araújo, N° 12, Jardim N República - Cubatão</span>
+    
+        <div class="bg-green-600 px-4 py-1 rounded-lg mt-5" id="date-span">
+            <span class="text-white font-medium">Ter á Dom - 19:00 as 23:00</span>
+        </div>
+    
+    
+    </div>
+   </header> 
+
+   <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6"> Conheça nosso menu</h2>
+
+   <div class="mx-auto max-w-7xl px-2 my-2">
+    <h2 class="font-bold text-3xl">
+        Entradas
+    </h2>
+</div>
+
+   <div id="menu">
+
+        <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+            <div class="flex gap-2">
+                <img
+                    src="./assets/gohan.jpg"
+                    alt="Gohan"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+        
+                <div class="flex flex-col justify-between w-full">
+                    <div>
+                        <p class="font-bold">Gohan</p>
+                        <p class="text-sm">Porção de arroz tradicional japonês e levemente doce.</p>
+                    </div>
+                    
+                    <div class="flex items-center gap-2 mt-3">
+                        <p class="font-bold text-lg">R$ 14,00</p>
+                        <button
+                            class="ml-auto bg-gray-900 px-5 py-1 rounded add-to-cart-btn"
+                            data-name="Gohan"
+                            data-price="14.00"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="flex gap-2">
+                <img
+                    src="./assets/sunomono.jpg"
+                    alt="Sunomono"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+        
+                <div class="flex flex-col justify-between w-full">
+                    <div>
+                        <p class="font-bold">Sunomono</p>
+                        <p class="text-sm">Pepino japonês em conserva com kani e gergelim.</p>
+                    </div>
+                    
+                    <div class="flex items-center gap-2 mt-3">
+                        <p class="font-bold text-lg">R$ 14,00</p>
+                        <button
+                            class="ml-auto bg-gray-900 px-5 py-1 rounded add-to-cart-btn"
+                            data-name="Sunomono"
+                            data-price="14.00"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img
+                    src="./assets/shimeji.jpg"
+                    alt="Shimeji"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+        
+                <div class="flex flex-col justify-between w-full">
+                    <div>
+                        <p class="font-bold">Shimeji</p>
+                        <p class="text-sm">Cogumelos frescos salteados na manteiga e temperados com molho shoyu, levemente adocicados.</p>
+                    </div>
+                    
+                    <div class="flex items-center gap-2 mt-3">
+                        <p class="font-bold text-lg">R$ 19,00</p>
+                        <button
+                            class="ml-auto bg-gray-900 px-5 py-1 rounded add-to-cart-btn"
+                            data-name="Shimeji"
+                            data-price="19.00"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img
+                    src="./assets/harumaki.jpg"
+                    alt="Harumaki queijo"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+        
+                <div class="flex flex-col justify-between w-full">
+                    <div>
+                        <p class="font-bold">Harumaki queijo</p>
+                        <p class="text-sm">Tradicional rolinho primavera recheado com queijo.</p>
+                    </div>
+                    
+                    <div class="flex items-center gap-2 mt-3">
+                        <p class="font-bold text-lg">R$ 08,50</p>
+                        <button
+                            class="ml-auto bg-gray-900 px-5 py-1 rounded add-to-cart-btn"
+                            data-name="Harumaki queijo"
+                            data-price="08.50"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <div class="mx-auto max-w-7xl px-2 my-2">
+            <h2 class="font-bold text-3xl">
+                Hot's
+            </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
+            
+            <div class="flex gap-2">
+                <img
+                    src="./assets/hotpimenta.jpg"
+                    alt="Hot Geleia Pimenta"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+        
+                <div class="flex flex-col justify-between w-full">
+                    <div>
+                        <p class="font-bold">Hot Geleia Pimenta (10 un)</p>
+                        <p class="text-sm">Arroz, alga (nori), salmão, cream cheese e geleia de pimenta.</p>
+                    </div>
+                    
+                    <div class="flex items-center gap-2 mt-3">
+                        <p class="font-bold text-lg">R$ 22,00</p>
+                        <button
+                            class="ml-auto bg-gray-900 px-5 py-1 rounded add-to-cart-btn"
+                            data-name="Hot Geleia Pimenta"
+                            data-price="22.00"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img
+                    src="./assets/hotroll.jpg"
+                    alt="Hot Roll"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+        
+                <div class="flex flex-col justify-between w-full">
+                    <div>
+                        <p class="font-bold">Hot Roll (10un)</p>
+                        <p class="text-sm">Arroz, alga (nori), salmão, cream cheese, cebolinha, gergelim e molho tarê.</p>
+                    </div>
+                    
+                    <div class="flex items-center gap-2 mt-3">
+                        <p class="font-bold text-lg">R$ 20,00</p>
+                        <button
+                            class="ml-auto bg-gray-900 px-5 py-1 rounded add-to-cart-btn"
+                            data-name="Hot Roll"
+                            data-price="20.00"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img
+                    src="./assets/hotcouve.jpg"
+                    alt="Hot Couve"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+        
+                <div class="flex flex-col justify-between w-full">
+                    <div>
+                        <p class="font-bold">Hot Couve (10un)</p>
+                        <p class="text-sm">Arroz, alga (nori), salmão, cream cheese, couve crocante e molho tarê.</p>
+                    </div>
+                    
+                    <div class="flex items-center gap-2 mt-3">
+                        <p class="font-bold text-lg">R$ 20,50</p>
+                        <button
+                            class="ml-auto bg-gray-900 px-5 py-1 rounded add-to-cart-btn"
+                            data-name="Hot Couve"
+                            data-price="20.50"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img
+                    src="./assets/hotkimushi.jpg"
+                    alt="Hot Kimushi"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+        
+                <div class="flex flex-col justify-between w-full">
+                    <div>
+                        <p class="font-bold">Hot Kimushi (10un)</p>
+                        <p class="text-sm">Arroz, alga (nori), salmão, cream cheese, molho kimushi e gergelim.</p>
+                    </div>
+                    
+                    <div class="flex items-center gap-2 mt-3">
+                        <p class="font-bold text-lg">R$ 20,50</p>
+                        <button
+                            class="ml-auto bg-gray-900 px-5 py-1 rounded add-to-cart-btn"
+                            data-name="Hot Kimushi"
+                            data-price="20.50"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mx-auto max-w-7xl px-2 my-2">
+            <h2 class="font-bold text-3xl">
+                Temakis
+            </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
+
+            <div class="flex gap-2">
+                <img
+                    src="./assets/temakimaionese.jpg"
+                    alt="Temaki Salmão Maionese"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+        
+                <div class="flex flex-col justify-between w-full">
+                    <div>
+                        <p class="font-bold">Temaki Salmão Maionese</p>
+                        <p class="text-sm">Cone de alga desidratada (nori) com arroz e recheio de salmão, maionese e cebolinha.</p>
+                    </div>
+                    
+                    <div class="flex items-center gap-2 mt-3">
+                        <p class="font-bold text-lg">R$ 26,50</p>
+                        <button
+                            class="ml-auto bg-gray-900 px-5 py-1 rounded add-to-cart-btn"
+                            data-name="Temaki Salmão Maionese"
+                            data-price="26.50"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img
+                    src="./assets/temakisimples.jpg"
+                    alt="Temaki Salmão Simples"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+        
+                <div class="flex flex-col justify-between w-full">
+                    <div>
+                        <p class="font-bold">Temaki Salmão Simples</p>
+                        <p class="text-sm">Cone de alga desidratada (nori) com arroz, recheio de salmão e cebolinha.</p>
+                    </div>
+                    
+                    <div class="flex items-center gap-2 mt-3">
+                        <p class="font-bold text-lg">R$ 24,50</p>
+                        <button
+                            class="ml-auto bg-gray-900 px-5 py-1 rounded add-to-cart-btn"
+                            data-name="Temaki Salmão Simples"
+                            data-price="24.50"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img
+                    src="./assets/temakidoritos.jpg"
+                    alt="Temaki Salmão Doritos"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+        
+                <div class="flex flex-col justify-between w-full">
+                    <div>
+                        <p class="font-bold">Temaki Salmão Doritos</p>
+                        <p class="text-sm">Cone de alga desidratada (nori) com arroz, recheio de salmão, doritos, cream cheese e cebolinha.</p>
+                    </div>
+                    
+                    <div class="flex items-center gap-2 mt-3">
+                        <p class="font-bold text-lg">R$ 27,50</p>
+                        <button
+                            class="ml-auto bg-gray-900 px-5 py-1 rounded add-to-cart-btn"
+                            data-name="Temaki Salmão Doritos"
+                            data-price="27.50"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img
+                    src="./assets/temakihot.jpg"
+                    alt="Temaki Salmão Hot"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+        
+                <div class="flex flex-col justify-between w-full">
+                    <div>
+                        <p class="font-bold">Temaki Salmão Hot</p>
+                        <p class="text-sm">Cone todo empanado de alga desidratada (nori) com arroz e recheio de salmão grelhado, molho tarê, cream cheese e cebolinha.</p>
+                    </div>
+                    
+                    <div class="flex items-center gap-2 mt-3">
+                        <p class="font-bold text-lg">R$ 27,50</p>
+                        <button
+                            class="ml-auto bg-gray-900 px-5 py-1 rounded add-to-cart-btn"
+                            data-name="Temaki Salmão Hot"
+                            data-price="27.50"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="mx-auto max-w-7xl px-2 my-2">
+            <h2 class="font-bold text-3xl">
+                Bebidas
+            </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
+            
+            <div class="flex gap-2">
+                <img
+                    src="./assets/agua.jpg"
+                    alt="Agua 500ml"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+        
+                <div class="flex flex-col justify-between w-full">
+                    <div>
+                        <p class="font-bold">Agua 500ml</p>
+                        <p class="text-sm">Crystal</p>
+                    </div>
+                    
+                    <div class="flex items-center gap-2 mt-3">
+                        <p class="font-bold text-lg">R$ 04,00</p>
+                        <button
+                            class="ml-auto bg-gray-900 px-5 py-1 rounded add-to-cart-btn"
+                            data-name="Agua 500ml"
+                            data-price="04.00"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img
+                    src="./assets/coca.jpg"
+                    alt="Coca Lata"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+        
+                <div class="flex flex-col justify-between w-full">
+                    <div>
+                        <p class="font-bold">Coca Lata</p>
+                        <p class="text-sm">Coca Cola Lata</p>
+                    </div>
+                    
+                    <div class="flex items-center gap-2 mt-3">
+                        <p class="font-bold text-lg">R$ 07,00</p>
+                        <button
+                            class="ml-auto bg-gray-900 px-5 py-1 rounded add-to-cart-btn"
+                            data-name="Coca Lata"
+                            data-price="07.00"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img
+                    src="./assets/cocazero.jpg"
+                    alt="Coca Zero Lata"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+        
+                <div class="flex flex-col justify-between w-full">
+                    <div>
+                        <p class="font-bold">Coca Zero Lata</p>
+                        <p class="text-sm">Coca Cola Zero Lata</p>
+                    </div>
+                    
+                    <div class="flex items-center gap-2 mt-3">
+                        <p class="font-bold text-lg">R$ 08,00</p>
+                        <button
+                            class="ml-auto bg-gray-900 px-5 py-1 rounded add-to-cart-btn"
+                            data-name="Coca Zero Lata"
+                            data-price="08.00"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img
+                    src="./assets/guarana.jpg"
+                    alt="Guarana Lata"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+        
+                <div class="flex flex-col justify-between w-full">
+                    <div>
+                        <p class="font-bold">Guarana Lata</p>
+                        <p class="text-sm">Guarana Antarctica Lata</p>
+                    </div>
+                    
+                    <div class="flex items-center gap-2 mt-3">
+                        <p class="font-bold text-lg">R$ 07,00</p>
+                        <button
+                            class="ml-auto bg-gray-900 px-5 py-1 rounded add-to-cart-btn"
+                            data-name="Guarana Lata"
+                            data-price="07.00"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img
+                    src="./assets/fantau.jpg"
+                    alt="Fanta Uva Lata"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+        
+                <div class="flex flex-col justify-between w-full">
+                    <div>
+                        <p class="font-bold">Fanta Uva Lata</p>
+                        <p class="text-sm">Fanta Uva Lata</p>
+                    </div>
+                    
+                    <div class="flex items-center gap-2 mt-3">
+                        <p class="font-bold text-lg">R$ 07,00</p>
+                        <button
+                            class="ml-auto bg-gray-900 px-5 py-1 rounded add-to-cart-btn"
+                            data-name="Fanta Uva Lata"
+                            data-price="07.00"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img
+                    src="./assets/fantal.jpg"
+                    alt="Fanta Laranja Lata"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+        
+                <div class="flex flex-col justify-between w-full">
+                    <div>
+                        <p class="font-bold">Fanta Laranja Lata</p>
+                        <p class="text-sm">Fanta Laranja Lata</p>
+                    </div>
+                    
+                    <div class="flex items-center gap-2 mt-3">
+                        <p class="font-bold text-lg">R$ 07,00</p>
+                        <button
+                            class="ml-auto bg-gray-900 px-5 py-1 rounded add-to-cart-btn"
+                            data-name="Fanta Laranja Lata"
+                            data-price="07.00"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+   </div>
+
+   <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden"
+   id="cart-modal">
+
+    <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
+        <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>
+
+        <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
+
+        <p  class="font-bold">Total: <span id="cart-total">0.00</span></p>
+
+        <p class="font-bold mt-4">Endereço de entrega:</p>
+        <input 
+            type="text"
+            placeholder="Digite seu Endereço completo..."
+            id="address"
+            class="w-full border-2 p-1 rounded my-1"
+        />
+
+        <p class="text-red-500 hidden" id="address-warn">Digite seu endereço completo</p>
+
+        <div class="flex items-center justify-between mt-5 w-full">
+            <button id="close-modal-btn">Fechar</button>
+            <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalizar pedido</button>
+        </div>
+    </div>
+
+   </div>
+
+   <footer class="w-full bg-red-500 py-3 fixed bottom-0 z-40 flex items-center justify-center">
+     <button class="flex items-center gap-2 text-white font-bold" id="cart-btn">
+        (<span id="cart-count">0</span>)
+        Veja meu carrinho
+        <i class="fa fa-cart-plus text-lg text-white"></i>
+
+     </button>
+   </footer>
+
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+   <script src="script.js"></script>
+
+</body>
+</html>
