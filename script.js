@@ -163,7 +163,7 @@ checkoutBtn.addEventListener("click", function(){
         );
     }).join("\n\n"); // Adiciona uma linha vazia entre cada produto
     
-    const message = `Olá! Gostaria de realizar o pedido com as seguintes informações:\n\n${cartItems}\n\nEndereço: ${addressInput.value}\n\n.Agradecemos pela preferência!`;
+    const message = `Olá! Gostaria de realizar o pedido com as seguintes informações:\n\n${cartItems}\n\nEndereço: ${addressInput.value}\n\nAgradecemos pela preferência!`;
     const encodedMessage = encodeURIComponent(message);
     const phone = "13997632444";
     
