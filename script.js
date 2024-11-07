@@ -159,11 +159,11 @@ checkoutBtn.addEventListener("click", function(){
 
     const cartItems = cart.map((item) => {
         return (
-            ` ${item.name}\n,  Quantidade: ${item.quantity}\n,  Preço: R$${item.price};`
+            ` ${item.name}\n Quantidade: ${item.quantity}\n Preço: R$${item.price} `
         );
     }).join("\n\n"); // Adiciona uma linha vazia entre cada produto
     
-    const message = `Olá! Gostaria de realizar o pedido com as seguintes informações:\n\n${cartItems}\n\nEndereço: ${addressInput.value}\n\n.                  Agradecemos pela preferência!`;
+    const message = `Olá! Gostaria de realizar o pedido com as seguintes informações:\n\n${cartItems}\n\nEndereço: ${addressInput.value}\n\n.Agradecemos pela preferência!`;
     const encodedMessage = encodeURIComponent(message);
     const phone = "13997632444";
     
